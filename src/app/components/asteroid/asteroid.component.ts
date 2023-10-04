@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Asteroid } from 'src/app/types/asteroid';
 
 @Component({
@@ -7,10 +7,10 @@ import { Asteroid } from 'src/app/types/asteroid';
   styleUrls: ['./asteroid.component.css']
 })
 export class AsteroidComponent {
-    asteroid: Asteroid  = {
-      id:1,
-      name: "365014 (2008 OX2)",
-      approachDate: "2023-09-02",
-      size: 0.57
-    };
+  @Input() asteroid?: Asteroid;
+    // asteroid: Asteroid  = {
+    //   id:1,
+    //   name: "365014 (2008 OX2)",
+    //   estimated_diameter.kilometers : 25,
+    // };
 }

@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { AsteroidComponent } from './components/asteroid/asteroid.component';
 import { HttpClientModule } from "@angular/common/http";
 import { AsteroidListComponent } from './components/asteroid-list/asteroid-list.component';
+import { AsteroidDetailsComponent } from './components/asteroid-details/asteroid-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AsteroidComponent,
-    AsteroidListComponent
+    AsteroidListComponent,
+    AsteroidDetailsComponent
   ],
   imports: [
     BrowserModule,

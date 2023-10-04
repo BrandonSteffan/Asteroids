@@ -1,10 +1,10 @@
-<div class="asCont">
+<!-- <div class="asCont">
     <div>
         <p class="bold">Asteroid Name</p>
         <p class="data">{{asteroid.name}}</p>
     </div>
     <div>
-        <p class="bold">Earth approach date</p>
+        
         <p class="data">{{asteroid.approachDate}}</p>
     </div>
     <div>
@@ -12,4 +12,20 @@
         <p class="data">{{asteroid.size}} km</p>
     </div>
     <a href="">Details</a>
+</div> -->
+
+<div *ngIf="asteroid" class="asCont" [ngClass]="asteroid.is_potentially_hazardous_asteroid == true ? 'danger' : ''">
+    <div>
+        <p class="bold">Asteroid Name</p>
+        <p class="data">{{asteroid.name}}</p>
+    </div>
+    <div>
+        <p class="bold">Earth approach date</p>
+        <p class="data">{{asteroid.close_approach_data[0].close_approach_date}}</p>
+    </div>
+    <div>
+        <p class="bold">Size</p>
+        <p class="data">min: {{asteroid.estimated_diameter.kilometers.estimated_diameter_min}}km <br> max: {{asteroid.estimated_diameter.kilometers.estimated_diameter_max}}km </p>
+    </div>
+    <a routerLink="/asteroids/{{asteroid.id}}">Details</a>
 </div>
