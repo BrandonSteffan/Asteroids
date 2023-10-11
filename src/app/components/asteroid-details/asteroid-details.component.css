@@ -1,6 +1,7 @@
 h1{
     font-weight: bold;
     margin: 30px;
+    text-align: center;
 }
 
 .details{
@@ -27,6 +28,12 @@ button{
     color: #fefefe;
     padding: 15px;
     border-radius: 20px;
-    font-size: 20px;
-    margin-left: 50px;
+    font-size: 18px;
+    
+    position: absolute;
+    top: 240px;
+    left: 530px;
+}
+button:hover{
+    cursor: pointer;
 }

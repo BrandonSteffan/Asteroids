@@ -1,18 +1,4 @@
-<!-- <div class="asCont">
-    <div>
-        <p class="bold">Asteroid Name</p>
-        <p class="data">{{asteroid.name}}</p>
-    </div>
-    <div>
-        
-        <p class="data">{{asteroid.approachDate}}</p>
-    </div>
-    <div>
-        <p class="bold">Size</p>
-        <p class="data">{{asteroid.size}} km</p>
-    </div>
-    <a href="">Details</a>
-</div> -->
+
 
 <div *ngIf="asteroid" class="asCont" [ngClass]="asteroid.is_potentially_hazardous_asteroid == true ? 'danger' : ''">
     <div>
